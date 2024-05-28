@@ -79,7 +79,7 @@ header {
 .card__title {
     color: #0f6b3a;
     text-transform: uppercase;
-    font-size:calc(var(--index) * 0.8);
+    font-size:calc(var(--index) * 1);
     margin: 0.5em;
 }
 
@@ -109,7 +109,7 @@ header {
 
 table {
     padding: 0 calc(var(--index) * 1.2);
-    font-size: calc(var(--index) * 0.76);
+    font-size: calc(var(--index) * 0.9);
     height: calc(var(--index) * 3.8);
     width: calc(var(--index) * 21);
     white-space: collapse balance;
