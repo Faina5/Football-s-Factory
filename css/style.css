@@ -9,7 +9,6 @@ html {
 
 :root {
     --index: calc(1vh + 1vw);
-    --gallery-gap: calc(var(--index) * 20);
 }
 
 * {
@@ -17,7 +16,7 @@ html {
 }
 
 li {
-list-style-type: none;
+    list-style-type: none;
 }
 
 body {
@@ -86,11 +85,11 @@ header {
 .card-field {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
-    text-overflow: ellipsis;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    min-height: 0;
 }
 
 .card-field svg {
@@ -104,51 +103,62 @@ header {
 .card-field__items {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: calc(var(--index) * 0.5);
+    min-height: 0;
+    
 }
 
-table {
+.card-field__table {
     padding: 0 calc(var(--index) * 1.2);
-    font-size: calc(var(--index) * 0.85);
-    height: calc(var(--index) * 3.8);
+    font-size: calc(var(--index) * 0.9);
+    height: calc(var(--index) * 4.1);
     width: calc(var(--index) * 21);
-    white-space: collapse balance;
-    table-layout: fixed;
 }
 
-th {
-    width: 25%;
-    text-align: left;
+.swiper.mySwiper{
+    height: 100%;
+    width: calc(var(--index) * 20);
+    font-size: calc(var(--index) * 0.84);
+    display: flex;
+    margin-right: calc(var(--index) * 0);
+    padding-bottom: calc(var(--index) * 1);
 }
 
-td {
+.teamtime {
+    position: absolute;
+    width: calc(var(--index) * 14);
+    left: calc(var(--index) * 5);
+}
+
+.field-quarter {
+    position: absolute;
+    top: calc(var(--index) * 1);
+    margin: 0 auto;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.teamtime__text {
+    text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
    -webkit-line-clamp: 3;
    -webkit-box-orient: vertical;
-}
-
-.war {
-    margin-top: -0.5rem;
-}
-
-th, td {
-    vertical-align: top;
-}
-
-.teamtime__text {
-    text-transform: uppercase;
+   margin-bottom: calc(var(--index) * 0.1);
 }
 
 .players__title {
     color: #c7234f;
     text-shadow: #fff 1px 0 1px, #fff 0 1px 1px, #fff -1px 0 1px, #fff 0 -1px 1px;
+    position: absolute;
+    top: calc(var(--index) * 0.5);
 }
 
 .waiters__title {
     color: #287744;
     text-shadow: #fff 1px 0 1px, #fff 0 1px 1px, #fff -1px 0 1px, #fff 0 -1px 1px;
+    position: absolute;
+    top: calc(var(--index) * 4.5);
 }
 
 footer {
